@@ -1,0 +1,22 @@
+public class HeartRateCalculator {
+    public static void main(String[] args) {
+        int age = 25; // Example age, can be input by user
+
+        // Calculate MHR
+        int maxHeartRate = 220 - age;
+
+        // Calculate heart rate zones
+        double lightExerciseLower = maxHeartRate * 0.50;
+        double lightExerciseUpper = maxHeartRate * 0.60;
+        double moderateExerciseLower = maxHeartRate * 0.60;
+        double moderateExerciseUpper = maxHeartRate * 0.70;
+        double hardExerciseLower = maxHeartRate * 0.70;
+        double hardExerciseUpper = maxHeartRate * 0.85;
+
+        // Output results
+        System.out.println("Maximum Heart Rate: " + maxHeartRate);
+        System.out.println("Light Exercise Zone: " + lightExerciseLower + " to " + lightExerciseUpper);
+        System.out.println("Moderate Exercise Zone: " + moderateExerciseLower + " to " + moderateExerciseUpper);
+        System.out.println("Hard Exercise Zone: " + hardExerciseLower + " to " + hardExerciseUpper);
+    }
+}
