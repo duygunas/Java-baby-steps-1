@@ -1,0 +1,30 @@
+public class AwakeTimeCalculator {
+
+
+
+    public static void main(String[] args) {
+        // Define total hours in a day
+        int totalHoursInDay = 24;
+
+        // Define sleeping hours
+        int sleepingHours = 8;
+
+        // Calculate awake hours in a day
+        int awakeHoursInDay = totalHoursInDay - sleepingHours;
+
+        // Define total years
+        int totalYears = 40;
+
+        // Calculate total days in 40 years
+        int totalDaysIn40Years = totalYears * 365;
+
+        // Calculate total awake hours in 40 years
+        int totalAwakeHoursIn40Years = awakeHoursInDay * totalDaysIn40Years;
+
+        // Convert hours to years (using integer division)
+        int awakeYearsIn40Years = totalAwakeHoursIn40Years / totalHoursInDay / 365;
+
+        // Output the result
+        System.out.println("Total years awake in 40 years (rounded down to nearest whole number): " + awakeYearsIn40Years);
+    }
+}
