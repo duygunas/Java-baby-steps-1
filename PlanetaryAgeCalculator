@@ -1,0 +1,30 @@
+/**
+ *
+ * @author duygunas
+ */
+public class PlanetaryAgeCalculator {
+    public static void main(String[] args) {
+        int earthAge = 40; // Your age on Earth in years
+
+        // Orbital periods of planets in Earth years
+        double mercuryYear = 0.2408467;
+        double venusYear = 0.61519726;
+        double marsYear = 1.8808158;
+        double jupiterYear = 11.862615;
+        double saturnYear = 29.447498;
+
+        // Calculating age on different planets
+        double ageOnMercury = earthAge / mercuryYear;
+        double ageOnVenus = earthAge / venusYear;
+        double ageOnMars = earthAge / marsYear;
+        double ageOnJupiter = earthAge / jupiterYear;
+        double ageOnSaturn = earthAge / saturnYear;
+
+        // Printing the results
+        System.out.println("My age on Mercury: " + ageOnMercury + " years");
+        System.out.println("My age on Venus: " + ageOnVenus + " years");
+        System.out.println("My age on Mars: " + ageOnMars + " years");
+        System.out.println("My age on Jupiter: " + ageOnJupiter + " years");
+        System.out.println("My age on Saturn: " + ageOnSaturn + " years");
+    }
+}
