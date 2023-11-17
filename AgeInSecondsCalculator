@@ -1,0 +1,25 @@
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
+
+public class AgeInSecondsCalculator {
+    public static void main(String[] args) {
+        // User's birthdate (YYYY, MM, DD)
+        LocalDate birthDate = LocalDate.of(1983, 10, 27);  // Example birthdate
+
+        // Current date
+        LocalDate currentDate = LocalDate.now();
+
+        // Calculate age in years, months, and days
+        Period age = Period.between(birthDate, currentDate);
+
+        // Convert age to total days
+        long totalDays = ChronoUnit.DAYS.between(birthDate, currentDate);
+
+        // Convert total days to seconds (assuming 24 hours per day)
+        long ageInSeconds = totalDays * 24 * 60 * 60;
+
+        // Output the result
+        System.out.println("You are " + ageInSeconds + " seconds old.");
+    }
+}
