@@ -1,0 +1,24 @@
+package test;
+
+import java.util.Scanner;
+
+public class Test
+{
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Adınızı sonuna dönem numarasını giriniz: ");
+            String ad = scanner.nextLine();
+
+            if (ad.endsWith("1") || ad.endsWith("2") || ad.endsWith("3") || ad.endsWith("4")) 
+                System.out.println("Teşekkürler ");
+                
+            else if (ad.endsWith("5") || ad.endsWith("6") || ad.endsWith("7") || ad.endsWith("8") || ad.endsWith("9")) {
+                System.out.println("Geçersiz dönem numarası girdiniz");
+                System.out.println("4 dönem bulunmaktadır. Lütfen tekrar deneyiniz.");
+
+            } else 
+                System.out.println(ad + " dönem numaranızı girmediniz");
+            
+        }
+    }
+}
