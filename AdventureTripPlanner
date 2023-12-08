@@ -1,0 +1,99 @@
+package adventuretripplanner;
+import java.util.Scanner;
+
+public class AdventureTripPlanner {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Are you planning a solo adventure or a group adventure? (Enter 'solo' or 'group')");
+        String adventureType = scanner.nextLine().toLowerCase();
+
+        if (adventureType.equals("solo")) {
+            System.out.println("Choose your preferred environment: 'Mountains', 'Beach', 'Forest', 'Urban'");
+            String environment = scanner.nextLine().toLowerCase();
+
+            System.out.println("Choose your adventure intensity: 'Relaxed', 'Moderate', 'Challenging', 'Extreme'");
+            String intensity = scanner.nextLine().toLowerCase();
+
+            // Solo adventure recommendations
+            switch (environment) {
+                case "mountains":
+                    switch (intensity) {
+                        case "relaxed":
+                            System.out.println("Recommendation: Gentle hill walking with scenic viewpoints.");
+                            break;
+                        case "moderate":
+                            System.out.println("Recommendation: A day hike with beautiful natural features.");
+                            break;
+                        case "challenging":
+                            System.out.println("Recommendation: A multi-day backpacking trip through rugged terrain.");
+                            break;
+                        case "extreme":
+                            System.out.println("Recommendation: A solo climbing expedition or high-altitude trek.");
+                            break;
+                    }
+                    break;
+                case "beach":
+                    switch (intensity) {
+                        case "relaxed":
+                            System.out.println("Recommendation: Leisurely beachcombing and sunbathing.");
+                            break;
+                        case "moderate":
+                            System.out.println("Recommendation: Surf lessons or a day of snorkeling.");
+                            break;
+                        case "challenging":
+                            System.out.println("Recommendation: A solo sea kayaking journey along the coast.");
+                            break;
+                        case "extreme":
+                            System.out.println("Recommendation: Windsurfing or jet-skiing adventure.");
+                            break;
+                    }
+                    break;
+                // Add cases for 'forest' and 'urban'
+            }
+
+        } else if (adventureType.equals("group")) {
+            System.out.println("Choose the time of year: 'Spring', 'Summer', 'Autumn', 'Winter'");
+            String season = scanner.nextLine().toLowerCase();
+
+            System.out.println("Choose your group type: 'Family', 'Friends', 'Corporate'");
+            String groupType = scanner.nextLine().toLowerCase();
+
+            // Group adventure recommendations
+            switch (season) {
+                case "spring":
+                    switch (groupType) {
+                        case "family":
+                            System.out.println("Recommendation: Visit a botanical garden or family-friendly farm.");
+                            break;
+                        case "friends":
+                            System.out.println("Recommendation: Group hiking trip to see spring blooms.");
+                            break;
+                        case "corporate":
+                            System.out.println("Recommendation: Outdoor team-building activities.");
+                            break;
+                    }
+                    break;
+                case "summer":
+                    switch (groupType) {
+                        case "family":
+                            System.out.println("Recommendation: Beach vacation with sandcastles and snorkeling.");
+                            break;
+                        case "friends":
+                            System.out.println("Recommendation: Camping with water sports and bonfire night.");
+                            break;
+                        case "corporate":
+                            System.out.println("Recommendation: Team-building retreat with rafting or beach Olympics.");
+                            break;
+                    }
+                    break;
+                // Add cases for 'autumn' and 'winter'
+            }
+
+        } else {
+            System.out.println("Invalid input. Please start over.");
+        }
+
+        scanner.close();
+    }
+}
